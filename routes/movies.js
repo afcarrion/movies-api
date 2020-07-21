@@ -65,7 +65,6 @@ function moviesApi(app){
             next(error);
         }
     });
-
     router.delete("/:movieId",  validationHandler({ movieId: movieIdSchema }, 'params'), async function(req, res, next){
         const { movieId } = req.params;
         try {
