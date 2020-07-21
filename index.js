@@ -12,6 +12,10 @@ app.get('/json', function(req, res){
     res.json({hello: 'world'});
 });
 */
+
+//Body-parser
+app.use(express.json());
+
 moviesApi(app);
 
 app.listen(config.port, function(){
